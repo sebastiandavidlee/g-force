@@ -1,0 +1,12 @@
+<launch>
+        
+
+        <!-- Launch data Logger -->
+        <node pkg="tae_ur_experiment"           type="robotStatePublisher.py"                 name="robotStatePublisher"            output="screen" />
+
+        <!-- Launch data Logger -->
+        <node pkg="tae_datalogger"           type="data_logger.py"                 name="tae_datalogger"            output="screen" />
+        
+      
+</launch>
+

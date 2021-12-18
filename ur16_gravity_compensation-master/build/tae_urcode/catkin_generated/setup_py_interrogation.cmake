@@ -1,0 +1,7 @@
+set(tae_ur_experiment_SETUP_PY_SETUP_MODULE "distutils.core")
+set(tae_ur_experiment_SETUP_PY_VERSION "0.1.0")
+set(tae_ur_experiment_SETUP_PY_SCRIPTS "")
+set(tae_ur_experiment_SETUP_PY_PACKAGES "tae_ur_experiment")
+set(tae_ur_experiment_SETUP_PY_PACKAGE_DIRS "src/tae_ur_experiment")
+set(tae_ur_experiment_SETUP_PY_MODULES "")
+set(tae_ur_experiment_SETUP_PY_MODULE_DIRS "")

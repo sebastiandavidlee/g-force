@@ -1,0 +1,42 @@
+<launch>
+
+    <!-- track parameters. -->
+    <arg name="marker_size"          default="3.47" />
+    <arg name="max_new_marker_error" default="0.05" />
+    <arg name="max_track_error"      default="0.05" />
+    <arg name="cam_image_topic"      default="/camera/color/image_raw" />
+    <arg name="cam_info_topic"       default="/camera/color/camera_info" />
+    <arg name="output_frame"         default="/camera_link" />
+
+    <!-- trans parameters. -->
+    <arg name="x_constant"          default="0.0" />
+    <arg name="cam_x_offset"        default="0.01675" />
+    <arg name="cam_y_offset"        default="0.040" />
+    <arg name="cam_z_offset"        default="0.0284" />
+
+<!--      --><!-- open camera launch file. -->
+<!--     <include file="$(find realsense2_camera)/launch/rs_camera.launch"> -->
+
+<!--      --><!-- open rviz -->
+<!--     <node type="rviz" name="rviz" pkg="rviz" args="-d $(find my_realsense)/rviz/config_file.rviz" /> -->
+
+
+    <!-- run track node. -->
+    <node name="ar_track_alvar" pkg="ar_track_alvar" type="individualMarkersNoKinect" respawn="false" output="screen">
+    <param name="marker_size"           type="double" value="$(arg marker_size)" />
+    <param name="max_new_marker_error"  type="double" value="$(arg max_new_marker_error)" />
+    <param name="max_track_error"       type="double" value="$(arg max_track_error)" />
+    <param name="output_frame"          type="string" value="$(arg output_frame)" />
+    <remap from="camera_image"  to="$(arg cam_image_topic)" />
+    <remap from="camera_info"   to="$(arg cam_info_topic)" />
+  </node>
+
+
+  <!-- run trans node. -->
+  <node name="ar_tag_trans" pkg="my_realsense" type="ar_tag_trans.py" output="screen">
+    <param name="x/constant"           type="double" value="$(arg x_constant)" />
+    <param name="cam/x_offset"           type="double" value="$(arg cam_x_offset)" />
+    <param name="cam/y_offset"           type="double" value="$(arg cam_y_offset)" />
+    <param name="cam/z_offset"           type="double" value="$(arg cam_z_offset)" />
+  </node>
+</launch>

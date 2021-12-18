@@ -1,0 +1,8 @@
+prefix=/home/edg-sandroom/catkin_ws/install
+
+Name: rosserial
+Description: Description of rosserial
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,6 @@
+/load_cell/x
+/load_cell/y
+/load_cell/z
+/load_cell/mx
+/load_cell/my
+/load_cell/mz

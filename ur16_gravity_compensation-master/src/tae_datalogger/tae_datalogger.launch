@@ -1,0 +1,3 @@
+<launch>
+        <node pkg="edg_data_logger"           type="data_logger.py"                 name="edg_data_logger"            output="screen" />
+</launch>

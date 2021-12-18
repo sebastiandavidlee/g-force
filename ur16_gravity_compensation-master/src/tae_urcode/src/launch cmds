@@ -1,0 +1,6 @@
+roslaunch ur_robot_driver ur16e_bringup.launch robot_ip:=172.22.22.2
+
+
+roslaunch ur16e_moveit_config ur16e_moveit_planning_execution.launch
+
+roslaunch ur16e_moveit_config moveit_rviz.launch rviz_config:=$(rospack find ur16e_moveit_config)/launch/moveit.rviz

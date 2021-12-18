@@ -1,0 +1,8 @@
+prefix=/home/edg-sandroom/catkin_ws/install
+
+Name: my_realsense
+Description: Description of my_realsense
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

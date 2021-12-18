@@ -1,0 +1,8 @@
+prefix=/home/edg-sandroom/catkin_ws/devel
+
+Name: tae_ur_experiment
+Description: Description of tae_ur_experiment
+Version: 0.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy message_runtime roscpp
